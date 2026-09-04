@@ -78,7 +78,9 @@ in that process rather than have to ask.
 full-access mail scope. Google recommended something narrower, and we agreed:
 `https://mail.google.com/` was removed from the project, and with it the ability
 to permanently delete mail. GOmirai now asks for exactly four permissions —
-`gmail.modify`, `calendar.events`, `openid` and `email`. Google's most recent
+`gmail.modify`, `calendar.events` and `openid` — and nothing else. (Signing in
+to GOmirai is a separate application with its own basic identity scopes, which
+cannot touch your mail.) Google's most recent
 review of that scope set and of a full demonstration of the application raised
 no further scope or functionality items.
 

@@ -19,13 +19,17 @@ leaving your control. This document sets out exactly what that means in practice
 
 ## What GOmirai accesses from Google
 
-GOmirai asks for exactly four OAuth scopes — no more.
+When you connect a mailbox, GOmirai asks for exactly three OAuth scopes — no more.
 
 | Scope | Class | Why |
 |---|---|---|
 | `gmail.modify` | Restricted | Read and display your mail; send what you compose; manage mailbox state — read/unread, star, labels, archive, move to Trash |
 | `calendar.events` | Sensitive | Read, create, edit and delete your calendar events, and RSVP to invitations |
-| `openid`, `email` | Basic | Identify the account being connected |
+| `openid` | Basic | Identify the account being connected |
+
+Signing in to GOmirai is separate from connecting a mailbox, and uses a
+different application with its own basic identity scopes. It requests no access
+to your mail or calendar at all.
 
 ### Why `gmail.modify` and not something narrower
 
